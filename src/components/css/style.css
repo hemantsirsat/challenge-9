@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+/* font-family: 'Space Mono', monospace; */
+
 .container {
     display: flex;
     min-height: 100vh;
@@ -7,11 +10,172 @@
     flex-direction: column;
 }
 
-.tipcontainer {
+.tip-container {
     display: flex;
     background-color: white;
     height: 20rem;
     width: 40rem;
     margin-top: 3rem;
     border-radius: 1rem;
+}
+
+.input-section {
+    display: flex;
+    flex: 1;
+    margin: 1rem;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.bill-amount, .total-person {
+    display: flex;
+    flex:1;
+    flex-direction: column;
+}
+
+.bill, .person {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(189,41%,91%);
+    border-radius: 0.3rem;
+    height: 2.3rem;
+}
+
+.bill img, .person img {
+    height: 0.8rem;
+    display: flex;
+    margin-left: 0.8rem;
+}
+
+.bill input, .person input {
+    display: flex;
+    height: 2rem;
+    border: none;
+    background-color: hsl(189,41%,91%);
+    text-align: right;
+    align-items: flex-end;
+    justify-items: flex-end;
+    flex: 1;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 2ch;
+    margin-right: 0.5rem;
+    color: hsl(183,100%,15%);
+}
+
+.bill input:focus, .person input:focus {
+    outline: none;
+}
+
+.bill:hover, .bill input:hover {
+    cursor: pointer;
+}
+
+.bill:hover {
+    border: 2px hsl(186,14%,53%) solid;
+}
+
+.bill-amount label, .tip-percent label, .total-person label {
+    font-family: 'Space Mono', monospace;
+    color: hsl(186,14%,43%);
+    font-size: 1.2ch;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.tip-percent {
+    display: flex;
+    flex:2;
+    margin-top: 1rem;
+}
+
+
+
+.total-person {
+    display: flex;
+    flex:1;
+}
+
+.output-section {
+    display: flex;
+    flex: 1;
+    margin: 1rem;
+    background-color: hsl(183,100%,15%);
+    border-radius: 1rem;
+    flex-direction: column;
+    padding: 2rem;
+    /* margin-top: -2rem; */
+}
+
+.amount-heading {
+    color: hsl(189,41%,91%);
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.3ch;
+}
+
+.dark-heading {
+    color: hsl(186,14%,53%);
+    font-family: 'Space Mono', monospace;
+    font-size: 1.2ch;
+}
+
+.tip-amount {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.tip-display {
+    display: flex;
+    flex: 1;    
+    justify-content: flex-end;
+    color: hsl(185,41%,84%);
+    font-weight: 700;
+    font-size: 3ch;
+    font-family: 'Space Mono', monospace;
+    
+}
+
+.total-amount {
+    display: flex;
+    flex: 1;
+}
+
+.reset-container {
+    display: flex;
+    /* flex: 1; */
+}
+
+.reset-container button {
+    border: none;
+    display: flex;
+    flex: 1;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185,41%,84%);
+    color: hsl(183,100%,15%);
+    font-weight: 700;
+}
+
+.reset-container button:hover {
+    cursor: pointer;
+}
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

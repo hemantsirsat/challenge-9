@@ -48,7 +48,7 @@
     margin-left: 0.8rem;
 }
 
-.bill input, .person input {
+.bill input, .person input, .zeroperson input {
     display: flex;
     height: 2rem;
     border: none;
@@ -64,7 +64,7 @@
     color: hsl(183,100%,15%);
 }
 
-.bill input:focus, .person input:focus {
+.bill input:focus, .person input:focus, .zeroperson input:focus {
     outline: none;
 }
 
@@ -88,13 +88,111 @@
     display: flex;
     flex:2;
     margin-top: 1rem;
+    flex-direction: column;
 }
 
+.tip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.tip-container1, .tip-container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip-container1 button, .tip-container2  button {
+    border: none;
+    padding:0
+}
+
+.tip-container1 button:hover, .tip-container2  button:hover {
+    cursor: pointer;
+}
+
+.tip-container2 {
+    margin-top: 0.5rem;
+}
+
+.tip-button {
+    display: flex;
+    flex: 1;
+    background-color: hsl(183,100%,15%);
+    height: 2.3rem;
+    min-width: 5rem;
+    border-radius: 0.3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip-button-text {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: hsl(189,41%,91%);
+}
+
+.tip-button-pressed {
+    display: flex;
+    flex: 1;
+    background-color: rgb(28, 218, 243);
+    height: 2.3rem;
+    width: 5rem;
+    border-radius: 0.3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip-button-text-pressed {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    color: hsl(183,100%,15%);
+}
+
+.custom-tip {
+    max-width: 4.5rem;
+    min-width: 4.5rem;
+    height: 2rem;
+    border-radius:0.3rem;
+    background-color:hsl(185,41%,84%);
+    border: 2px rgb(68, 216, 233) solid;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.8ch;
+    color: hsl(183,100%,15%);
+}
+
+.custom-tip:focus {
+    outline: none;
+}
 
 .total-person {
     display: flex;
     flex:1;
+}
+
+.person-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+#zeropeople {
+    color: red;
+}
+
+#hidden {
+    display:none
+}
+
+.zeroperson {
+    border: 2px red solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(189,41%,91%);
+    border-radius: 0.3rem;
+    height: 2.3rem;
 }
 
 .output-section {
@@ -105,7 +203,6 @@
     border-radius: 1rem;
     flex-direction: column;
     padding: 2rem;
-    /* margin-top: -2rem; */
 }
 
 .amount-heading {
@@ -123,7 +220,6 @@
 
 .tip-amount {
     display: flex;
-    flex: 1;
     align-items: center;
 }
 
@@ -135,7 +231,6 @@
     font-weight: 700;
     font-size: 3ch;
     font-family: 'Space Mono', monospace;
-    
 }
 
 .total-amount {
@@ -165,9 +260,6 @@
     cursor: pointer;
 }
 
-
-
-
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -178,4 +270,45 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@media(max-width: 678px) {    
+    .tip-container {
+        width: 38rem;
+    }
+}
+
+@media(max-width:621px) {
+
+    .logocontainer {
+        margin-top: 3rem;
+    }
+
+    .tip-container {
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-bottom: 0;
+    }
+
+    .input-section {
+        margin-left: 1rem;
+        justify-content: center;
+        align-items: center; 
+        flex:1;
+    }
+
+    .bill-amount, .tip-percent, .total-person {
+        width: 90%;
+    }
+
+    .total-person {
+        margin-top: 1rem;
+    }
+
+    input {
+        flex: 1;
+    }
 }

@@ -181,7 +181,6 @@ export default class Home extends React.Component {
                         </div>
                         <div className="reset-container">
                             <button
-                                // disabled={   }
                                 onClick={()=>{
                                     this.setState({
                                         billAmount:0.00,

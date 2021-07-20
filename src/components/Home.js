@@ -12,11 +12,6 @@ export default class Home extends React.Component {
                 billAmount:0.00,
                 totalPerson:1,
                 tipPercent:"1",
-                button1:false,
-                button2:false,
-                button3:false,
-                button4:false,
-                button5:false,
             }
     }
 
@@ -77,16 +72,11 @@ export default class Home extends React.Component {
                                         onClick={()=>{
                                             this.setState({
                                                 tipPercent:5,
-                                                button1: !this.state.button1,
-                                                button2:false,
-                                                button3:false,
-                                                button4:false,
-                                                button5:false,
                                             })
                                         }}
                                     >
-                                        <div className={this.state.button1?"tip-button-pressed":"tip-button"}>
-                                            <p className={this.state.button1?"tip-button-text-pressed":"tip-button-text"}>
+                                        <div className={this.state.tipPercent===5?"tip-button-pressed":"tip-button"}>
+                                            <p className={this.state.tipPercent===5?"tip-button-text-pressed":"tip-button-text"}>
                                                 5%
                                             </p>
                                         </div>
@@ -95,18 +85,11 @@ export default class Home extends React.Component {
                                         onClick={()=>{
                                             this.setState({
                                                 tipPercent:10,
-                                                button2: !this.state.button2,
-                                                button1:false,
-                                                button3:false,
-                                                button4:false,
-                                                button5:false,
-
-
                                             })
                                         }}
                                     >
-                                        <div className={this.state.button2?"tip-button-pressed":"tip-button"}>
-                                            <p className={this.state.button2?"tip-button-text-pressed":"tip-button-text"}>
+                                        <div className={this.state.tipPercent===10?"tip-button-pressed":"tip-button"}>
+                                            <p className={this.state.tipPercent===10?"tip-button-text-pressed":"tip-button-text"}>
                                                 10%
                                             </p>
                                         </div>
@@ -115,16 +98,11 @@ export default class Home extends React.Component {
                                         onClick={()=>{
                                             this.setState({
                                                 tipPercent:15,
-                                                button3: !this.state.button3,
-                                                button1:false,
-                                                button2:false,
-                                                button4:false,
-                                                button5:false,
                                             })
                                         }}
                                     >
-                                        <div className={this.state.button3?"tip-button-pressed":"tip-button"}>
-                                            <p className={this.state.button3?"tip-button-text-pressed":"tip-button-text"}>
+                                        <div className={this.state.tipPercent===15?"tip-button-pressed":"tip-button"}>
+                                            <p className={this.state.tipPercent===15?"tip-button-text-pressed":"tip-button-text"}>
                                                 15%
                                             </p>
                                         </div>
@@ -135,16 +113,11 @@ export default class Home extends React.Component {
                                         onClick={()=>{
                                             this.setState({
                                                 tipPercent:25,
-                                                button4: !this.state.button4,
-                                                button1:false,
-                                                button3:false,
-                                                button2:false,
-                                                button5:false,
                                             })
                                         }}
                                     >
-                                        <div className={this.state.button4?"tip-button-pressed":"tip-button"}>
-                                            <p className={this.state.button4?"tip-button-text-pressed":"tip-button-text"}>
+                                        <div className={this.state.tipPercent===25?"tip-button-pressed":"tip-button"}>
+                                            <p className={this.state.tipPercent===25?"tip-button-text-pressed":"tip-button-text"}>
                                                 25%
                                             </p>
                                         </div>
@@ -153,16 +126,11 @@ export default class Home extends React.Component {
                                         onClick={()=>{
                                             this.setState({
                                                 tipPercent:50,
-                                                button5: !this.state.button5,
-                                                button1:false,
-                                                button3:false,
-                                                button4:false,
-                                                button2:false,
                                             })
                                         }}
                                     >
-                                        <div className={this.state.button5?"tip-button-pressed":"tip-button"}>
-                                            <p className={this.state.button5?"tip-button-text-pressed":"tip-button-text"}>
+                                        <div className={this.state.tipPercent===50?"tip-button-pressed":"tip-button"}>
+                                            <p className={this.state.tipPercent===50?"tip-button-text-pressed":"tip-button-text"}>
                                                 50%
                                             </p>
                                         </div>
